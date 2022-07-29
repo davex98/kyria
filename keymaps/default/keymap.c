@@ -33,7 +33,7 @@ enum layers {
 #define CTL_MINS MT(MOD_RCTL, KC_MINUS)
 #define ALT_ENT  MT(MOD_LALT, KC_ENT)
 
-#define SP_SYM  MT(SYM, KC_SPC)
+#define SP_SYM  LT(SYM, KC_SPC)
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_ESC  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                        KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC,
      KC_LSFT , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                        KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN,CTL_QUOT,
      KC_LCTL , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC,KC_CAPS,     KC_T   , KC_RBRC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_RSFT,
-                                  KC_T , KC_LGUI, ALT_ENT, KC_SPC , NAV   ,     SP_SYM    , KC_SPC ,KC_RALT, KC_RGUI, KC_APP
+                                  KC_T , KC_LGUI, KC_LGUI, KC_SPC , NAV   ,     SP_SYM    , SP_SYM ,KC_ENT, KC_RGUI, KC_APP
     ),
 /*
  * Nav Layer: Media, navigation
@@ -97,9 +97,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_SYM] = LAYOUT(
-      KC_GRV ,   KC_1 ,   KC_2 ,   KC_3 ,   KC_4 ,   KC_5 ,                                      KC_7  ,  KC_8  ,  KC_9  ,   KC_9 ,   KC_0 , KC_EQL ,
-     KC_TILD , KC_EXLM,  KC_AT , KC_HASH,  KC_DLR, KC_PERC,                                      KC_4  ,  KC_5  ,  KC_6  , KC_LPRN, KC_RPRN, KC_PLUS,
-     KC_PIPE , KC_BSLS, KC_COLN, KC_SCLN, KC_MINS, KC_LBRC, KC_LCBR, _______, _______,  KC_0  ,  KC_1  ,  KC_2  ,  KC_3  ,  KC_DOT, KC_SLSH, KC_QUES,
+      KC_GRV ,   KC_1 ,   KC_2 ,   KC_3 ,   KC_4 ,   KC_5 ,                                       KC_EQL ,KC_7  ,  KC_8  ,  KC_9  ,   KC_9 ,   KC_0 ,
+     KC_TILD , KC_EXLM,  KC_AT , KC_HASH,  KC_DLR, KC_PERC,                                       KC_PLUS,KC_4  ,  KC_5  ,  KC_6  , KC_LPRN, KC_RPRN,
+     KC_PIPE , KC_BSLS, KC_COLN, KC_SCLN, KC_MINS, KC_LBRC, KC_LCBR, _______, _______,  KC_0  ,   KC_0,KC_1  ,  KC_2  ,  KC_3  ,  KC_DOT, KC_SLSH,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 // /*
