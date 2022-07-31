@@ -34,7 +34,7 @@ enum layers {
 #define CTL_QUOT MT(MOD_RCTL, KC_QUOTE)
 #define CTL_MINS MT(MOD_RCTL, KC_MINUS)
 #define ALT_ENT  MT(MOD_LALT, KC_ENT)
-#define SHIFT_TAB  MT(KC_LSFT, KC_TAB)
+#define SHIFT_TAB MT(KC_LSFT, KC_TAB)
 
 #define SP_SYM  LT(SYM, KC_SPC)
 #define SP_FKEYS  LT(FKEYS, KC_SPC)
@@ -86,21 +86,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Sym Layer: Numbers and symbols
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |    `   |  1   |  2   |  3   |  4   |  5   |                              |   6  |  7   |  8   |  9   |  0   |   =    |
+ * |    !   |  @   |  #   |  $   |  (   |  )   |                              |      |  7   |  8   |  9   |  _   |   =    |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |    ~   |  !   |  @   |  #   |  $   |  %   |                              |   ^  |  4   |  5   |  6   |  )   |   +    |
+ * |    %   |  ^   |  &   |  *   |  {   |  }   |                              |      |  4   |  5   |  6   |  -   |   +    |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |    |   |   \  |  :   |  ;   |  -   |  [   |  {   |      |  |      |   }  |   ]  |  1   |  2   |  3   |  /   |   ?    |
+ * |    |   |   \  |  `   |  ~   |  [   |  ]   |      |      |  |      |      |   0  |  1   |  2   |  3   |  <   |   >    |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_SYM] = LAYOUT(
-      KC_GRV ,   KC_1 ,   KC_2 ,   KC_3 ,   KC_4 ,   KC_5 ,                                       KC_EQL ,KC_7  ,  KC_8  ,  KC_9  ,   KC_9 ,   KC_0 ,
-     KC_TILD , KC_EXLM,  KC_AT , KC_HASH,  KC_DLR, KC_PERC,                                       KC_PLUS,KC_4  ,  KC_5  ,  KC_6  , KC_LPRN, KC_RPRN,
-     KC_PIPE , KC_BSLS, KC_COLN, KC_SCLN, KC_MINS, KC_LBRC, KC_LCBR, _______, _______,  KC_0  ,   KC_0   ,KC_1  ,  KC_2  ,  KC_3  ,  KC_DOT, KC_SLSH,
-                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+     KC_EXLM ,  KC_AT , KC_HASH ,  KC_DLR , KC_LPRN , KC_RPRN,                                           _______ , KC_7  ,  KC_8  ,  KC_9  ,  KC_MINS ,  KC_EQL ,
+     KC_PERC , KC_CIRC, KC_AMPR , KC_ASTR , KC_LCBR , KC_RCBR,                                           _______ , KC_4  ,  KC_5  ,  KC_6  ,  KC_UNDS ,  KC_PLUS,
+     KC_PIPE , KC_BSLS, KC_GRV  , KC_TILD, KC_LBRC , KC_RBRC, _______, _______, _______,  _______  ,     KC_0   , KC_1  ,  KC_2  ,  KC_3  ,  KC_LABK, KC_RABK,
+                                   _______, _______ , _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
 /*
